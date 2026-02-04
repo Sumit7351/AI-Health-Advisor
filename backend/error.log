@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "C:\Users\Sumit\.gemini\antigravity\scratch\ai_health_advisor\backend\app.py", line 52, in predict
+    result = model.predict_disease(input_dict)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sumit\.gemini\antigravity\scratch\ai_health_advisor\backend\model.py", line 158, in predict_disease
+    feature_importance.sort_values(by=['feature_importance_vals'], ascending=False, inplace=True)
+  File "C:\Users\Sumit\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\core\frame.py", line 7222, in sort_values
+    indexer = nargsort(
+              ^^^^^^^^^
+  File "C:\Users\Sumit\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\core\sorting.py", line 439, in nargsort
+    indexer = non_nan_idx[non_nans.argsort(kind=kind)]
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()

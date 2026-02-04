@@ -1,0 +1,994 @@
+{
+    "Influenza (Flu)": {
+        "description": "A common viral infection that can be deadly, especially in high-risk groups.",
+        "prevention": [
+            "Get vaccinated annually",
+            "Wash hands frequently",
+            "Avoid close contact with sick people"
+        ],
+        "cure": [
+            "Rest and hydration",
+            "Antiviral drugs if prescribed",
+            "Pain relievers"
+        ],
+        "diet": [
+            "Chicken soup",
+            "Leafy greens",
+            "Vitamin C rich fruits",
+            "Ginger tea"
+        ],
+        "lifestyle": [
+            "Stay home when sick",
+            "Cover mouth when coughing",
+            "Get plenty of sleep"
+        ]
+    },
+    "Common Cold": {
+        "description": "A viral infection of your nose and throat (upper respiratory tract).",
+        "prevention": [
+            "Wash hands",
+            "Don't share utensils",
+            "Boost immunity"
+        ],
+        "cure": [
+            "Rest",
+            "Fluids",
+            "Over-the-counter cold remedies"
+        ],
+        "diet": [
+            "Warm fluids",
+            "Citrus fruits",
+            "Honey",
+            "Garlic"
+        ],
+        "lifestyle": [
+            "Humidify air",
+            "Gargle salt water",
+            "Rest voice"
+        ]
+    },
+    "COVID-19": {
+        "description": "A disease caused by SARS-CoV-2 that can trigger what doctors call a respiratory tract infection.",
+        "prevention": [
+            "Vaccination",
+            "Mask wearing in high risk areas",
+            "Social distancing",
+            "Hand hygiene"
+        ],
+        "cure": [
+            "Symptomatic treatment",
+            "Antivirals for high risk",
+            "Hospitalization for severe cases"
+        ],
+        "diet": [
+            "High protein diet",
+            "Hydration",
+            "Zinc and Vitamin D supplements"
+        ],
+        "lifestyle": [
+            "Isolate if positive",
+            "Monitor oxygen levels",
+            "Breathing exercises"
+        ]
+    },
+    "Malaria": {
+        "description": "A disease caused by a plasmodium parasite, transmitted by the bite of infected mosquitoes.",
+        "prevention": [
+            "Mosquito nets",
+            "Insect repellent",
+            "Antimalarial medication"
+        ],
+        "cure": [
+            "Prescription antimalarial drugs (e.g., Artemisinin-based combination therapies)"
+        ],
+        "diet": [
+            "Nutrient-rich foods",
+            "Fluids to prevent dehydration",
+            "Avoid alcohol"
+        ],
+        "lifestyle": [
+            "Avoid mosquito bites",
+            "Wear long sleeves",
+            "Eliminate standing water"
+        ]
+    },
+    "Diabetes Type 2": {
+        "description": "A chronic condition that affects the way the body processes blood sugar (glucose).",
+        "prevention": [
+            "Healthy diet",
+            "Regular exercise",
+            "Weight control"
+        ],
+        "cure": [
+            "No cure, but manageable",
+            "Insulin therapy",
+            "Metformin"
+        ],
+        "diet": [
+            "Low carb",
+            "Low sugar",
+            "Whole grains",
+            "Vegetables",
+            "Lean protein"
+        ],
+        "lifestyle": [
+            "Monitor blood sugar",
+            "Regular foot checks",
+            "Quit smoking"
+        ]
+    },
+    "Hypertension": {
+        "description": "A condition in which the force of the blood against the artery walls is too high.",
+        "prevention": [
+            "Reduce salt intake",
+            "Exercise regularly",
+            "Limit alcohol"
+        ],
+        "cure": [
+            "Antihypertensive medications",
+            "Lifestyle changes"
+        ],
+        "diet": [
+            "DASH diet",
+            "Low sodium",
+            "Potassium rich foods",
+            "Fruits and vegetables"
+        ],
+        "lifestyle": [
+            "Stress management",
+            "Regular blood pressure monitoring",
+            "Weight management"
+        ]
+    },
+    "Migraine": {
+        "description": "A headache of varying intensity, often accompanied by nausea and sensitivity to light and sound.",
+        "prevention": [
+            "Identify triggers",
+            "Regular sleep schedule",
+            "Stress management"
+        ],
+        "cure": [
+            "Pain relievers",
+            "Triptans",
+            "Anti-nausea medications"
+        ],
+        "diet": [
+            "Avoid trigger foods (chocolate, cheese, caffeine)",
+            "Stay hydrated",
+            "Magnesium rich foods"
+        ],
+        "lifestyle": [
+            "Dark quiet room during attacks",
+            "Regular exercise",
+            "Relaxation techniques"
+        ]
+    },
+    "Gastroenteritis": {
+        "description": "An intestinal infection marked by diarrhea, cramps, nausea, vomiting, and fever.",
+        "prevention": [
+            "Hand washing",
+            "Food safety",
+            "Avoid contaminated water"
+        ],
+        "cure": [
+            "Rehydration",
+            "Rest",
+            "Probiotics"
+        ],
+        "diet": [
+            "BRAT diet (Bananas, Rice, Applesauce, Toast)",
+            "Clear broths",
+            "Electrolyte drinks"
+        ],
+        "lifestyle": [
+            "Rest",
+            "Avoid spreading to others",
+            "Gradual return to normal diet"
+        ]
+    },
+    "Asthma": {
+        "description": "A condition in which your airways narrow and swell and may produce extra mucus.",
+        "prevention": [
+            "Avoid triggers (pollen, dust, smoke)",
+            "Flu vaccination"
+        ],
+        "cure": [
+            "Inhalers (Bronchodilators, Steroids)",
+            "Long-term control medications"
+        ],
+        "diet": [
+            "Magnesium rich foods",
+            "Omega-3 fatty acids",
+            "Avoid sulfites"
+        ],
+        "lifestyle": [
+            "Breathing exercises",
+            "Regular exercise (controlled)",
+            "Allergy proofing home"
+        ]
+    },
+    "Pneumonia": {
+        "description": "Infection that inflames air sacs in one or both lungs, which may fill with fluid.",
+        "prevention": [
+            "Vaccination",
+            "Good hygiene",
+            "Quit smoking"
+        ],
+        "cure": [
+            "Antibiotics (bacterial)",
+            "Antivirals (viral)",
+            "Rest and fluids"
+        ],
+        "diet": [
+            "High calorie",
+            "High protein",
+            "Fruits and vegetables",
+            "Fluids"
+        ],
+        "lifestyle": [
+            "Rest",
+            "Humidifier",
+            "Avoid smoke"
+        ]
+    },
+    "Rare_Disease_11": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_12": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_13": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_14": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_15": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_16": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_17": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_18": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_19": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_20": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_21": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_22": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_23": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_24": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_25": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_26": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_27": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_28": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_29": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_30": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_31": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_32": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_33": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_34": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_35": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_36": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_37": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_38": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_39": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_40": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_41": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_42": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_43": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_44": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_45": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_46": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_47": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_48": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_49": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    },
+    "Rare_Disease_50": {
+        "description": "A procedurally generated rare disease for demonstration purposes.",
+        "prevention": [
+            "General hygiene",
+            "Regular checkups"
+        ],
+        "cure": [
+            "Consult a specialist",
+            "Symptomatic treatment"
+        ],
+        "diet": [
+            "Balanced diet",
+            "Hydration"
+        ],
+        "lifestyle": [
+            "Stress reduction",
+            "Moderate exercise"
+        ]
+    }
+}
