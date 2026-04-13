@@ -1,0 +1,298 @@
+
+import json
+
+# Comprehensive advice for all 41 diseases in the new dataset
+disease_advice = {
+    'Fungal infection': {
+        'description': "A common skin infection caused by fungi, leading to itching and rashes.",
+        'prevention': ["Keep skin dry and clean", "Avoid sharing personal items", "Wear clean clothes"],
+        'cure': ["Antifungal creams", "Oral antifungal medication (if prescribed)", "Keep area dry"],
+        'diet': ["Avoid sugary foods", "Eat probiotics (yogurt)", "Garlic"],
+        'lifestyle': ["Wear loose cotton clothes", "Change socks daily", "Shower after sweating"]
+    },
+    'Allergy': {
+        'description': "An immune system reaction to a foreign substance causing sneezing and irritation.",
+        'prevention': ["Identify and avoid triggers", "Keep windows closed during pollen season", "Wear a mask in dusty areas"],
+        'cure': ["Antihistamines", "Decongestants", "Nasal sprays"],
+        'diet': ["Anti-inflammatory foods", "Vitamin C rich fruits", "Ginger tea"],
+        'lifestyle': ["Use air purifiers", "Wash bedding regularly", "Shower before bed to remove allergens"]
+    },
+    'GERD': {
+        'description': "Gastroesophageal reflux disease, causing chronic heartburn and indigestion.",
+        'prevention': ["Avoid trigger foods", "Don't eat late at night", "Maintain healthy weight"],
+        'cure': ["Antacids", "Proton pump inhibitors", "H2 blockers"],
+        'diet': ["Avoid spicy/acidic foods", "Small frequent meals", "Ginger", "Oatmeal"],
+        'lifestyle': ["Elevate head while sleeping", "Quit smoking", "Avoid lying down after eating"]
+    },
+    'Chronic cholestasis': {
+        'description': "A liver condition where bile flow is reduced or blocked.",
+        'prevention': ["Limit alcohol", "Hepatitis vaccination", "Avoid toxins"],
+        'cure': ["Ursodeoxycholic acid", "Vitamin supplements", "Treat underlying cause"],
+        'diet': ["Low fat diet", "High fiber", "Calcium and Vitamin D"],
+        'lifestyle': ["Regular checkups", "Avoid alcohol", "Stay hydrated"]
+    },
+    'Drug Reaction': {
+        'description': "An adverse reaction to a medication, ranging from skin rashes to severe complications.",
+        'prevention': ["Know your allergies", "Inform doctors of past reactions", "Read drug labels"],
+        'cure': ["Stop the medication", "Antihistamines", "Corticosteroids"],
+        'diet': ["Bland diet", "Hydration", "Avoid inflammatory foods"],
+        'lifestyle': ["Wear medical alert bracelet", "Keep list of medications", "Monitor symptoms"]
+    },
+    'Peptic ulcer diseae': {
+        'description': "Sores that develop on the lining of the stomach, small intestine, or esophagus.",
+        'prevention': ["Avoid overuse of NSAIDs", "Limit alcohol and smoking", "Manage stress"],
+        'cure': ["Antibiotics (for H. pylori)", "Proton pump inhibitors", "Antacids"],
+        'diet': ["Probiotics", "Fiber-rich foods", "Avoid spicy/acidic foods"],
+        'lifestyle': ["Stress management", "Quit smoking", "Eat regular meals"]
+    },
+    'AIDS': {
+        'description': "Acquired immunodeficiency syndrome, a chronic condition caused by HIV.",
+        'prevention': ["Safe sex practices", "Avoid sharing needles", "PrEP medication"],
+        'cure': ["No cure, but manageable with ART (Antiretroviral Therapy)", "Regular monitoring"],
+        'diet': ["High protein", "Food safety (avoid raw bacterial sources)", "Nutrient-dense foods"],
+        'lifestyle': ["Adherence to medication", "Regular exercise", "Avoid infections"]
+    },
+    'Diabetes ': {
+        'description': "A metabolic disease causing high blood sugar.",
+        'prevention': ["Maintain healthy weight", "Regular exercise", "Balanced diet"],
+        'cure': ["Insulin", "Metformin", "Lifestyle management (Control, not cure)"],
+        'diet': ["Low glycemic index foods", "High fiber", "Control carb intake"],
+        'lifestyle': ["Monitor blood sugar", "Foot care", "Regular eye exams"]
+    },
+    'Gastroenteritis': {
+        'description': "Inflammation of the stomach and intestines, often called stomach flu.",
+        'prevention': ["Hand washing", "Food hygiene", "Saf drinking water"],
+        'cure': ["Rehydration (ORS)", "Probiotics", "Rest"],
+        'diet': ["BRAT diet (Bananas, Rice, Applesauce, Toast)", "Clear fluids", "Avoid dairy"],
+        'lifestyle': ["Rest", "Isolate to prevent spread", "Hydrate frequently"]
+    },
+    'Bronchial Asthma': {
+        'description': "A condition where airways narrow and swell, producing extra mucus.",
+        'prevention': ["Avoid triggers (dust, smoke)", "Flu vaccination", "Wear mask"],
+        'cure': ["Inhalers", "Bronchodilators", "Steroids"],
+        'diet': ["Magnesium rich foods", "Omega-3s", "Avoid processed foods"],
+        'lifestyle': ["Breathing exercises", "Allergy-proof home", "Regular mild exercise"]
+    },
+    'Hypertension ': {
+        'description': "High blood pressure that can lead to heart disease.",
+        'prevention': ["Reduce salt", "Exercise", "Limit alcohol"],
+        'cure': ["Antihypertensives", "Lifestyle changes"],
+        'diet': ["DASH diet", "Low sodium", "Potassium rich foods (Bananas)"],
+        'lifestyle': ["Stress management", "Weight control", "Monitor BP regularly"]
+    },
+    'Migraine': {
+        'description': "Severe recurring headache, often with nausea and light sensitivity.",
+        'prevention': ["Identify triggers", "Regular sleep", "Hydration"],
+        'cure': ["Pain relievers", "Triptans", "Rest in dark room"],
+        'diet': ["Magnesium rich foods", "Avoid caffeine/alcohol triggers", "Stay hydrated"],
+        'lifestyle': ["Regular sleep routine", "Stress management", "Yoga"]
+    },
+    'Cervical spondylosis': {
+        'description': "Age-related wear and tear affecting the spinal disks in your neck.",
+        'prevention': ["Good posture", "Neck exercises", "Ergonomic workspace"],
+        'cure': ["Pain relievers", "Physical therapy", "Neck collar"],
+        'diet': ["Anti-inflammatory foods", "Calcium", "Vitamin D"],
+        'lifestyle': ["Regular neck stretches", "Correct sleeping pillow", "Avoid heavy lifting"]
+    },
+    'Paralysis (brain hemorrhage)': {
+        'description': "Loss of muscle function due to bleeding in the brain.",
+        'prevention': ["Control BP", "Healthy lifestyle", "Avoid head injury"],
+        'cure': ["Physical therapy", "Rehabilitation", "Medication for underlying cause"],
+        'diet': ["Heart-healthy diet", "Low sodium", "Easy to swallow foods"],
+        'lifestyle': ["Mobility aids", "Home safety modifications", "Regular therapy"]
+    },
+    'Jaundice': {
+        'description': "Yellowing of the skin and eyes due to high bilirubin levels.",
+        'prevention': ["Hepatitis vaccination", "Hygenic food/water", "Limit alcohol"],
+        'cure': ["Treat underlying cause", "Phototherapy (infants)", "Medication"],
+        'diet': ["High carb", "Low fat", "Plenty of fluids", "Sugarcane juice"],
+        'lifestyle': ["Rest", "Avoid hepatotoxic drugs", "Sunlight exposure"]
+    },
+    'Malaria': {
+        'description': "A mosquito-borne disease caused by a parasite.",
+        'prevention': ["Mosquito nets", "Repellents", "Long clothing", "Antimalarials"],
+        'cure': ["Antimalarial drugs (Chloroquine, Artemisinin)"],
+        'diet': ["Nutrient rich fluids", "Citrus fruits", "Avoid oily foods"],
+        'lifestyle': ["Prevent mosquito bites", "Eliminate standing water", "Rest"]
+    },
+    'Chicken pox': {
+        'description': "A highly contagious viral infection causing an itchy blister-like rash.",
+        'prevention': ["Varicella vaccine", "Isolation of infected"],
+        'cure': ["Symptomatic relief", "Calamine lotion", "Antivirals"],
+        'diet': ["Soft foods", "Cool fluids", "Avoid acidic foods"],
+        'lifestyle': ["Isolate", "Avoid scratching", "Cool baths"]
+    },
+    'Dengue': {
+        'description': "A mosquito-borne viral infection causing severe flu-like symptoms.",
+        'prevention': ["Destroy mosquito breeding sites", "Repellents", "Nets"],
+        'cure': ["Fluids", "Pain relief (Paracetamol)", "Hospitalization if severe"],
+        'diet': ["Papaya leaf juice", "Coconut water", "Pomegranate", "Hydration"],
+        'lifestyle': ["Rest absolute", "Monitor platelets", "Avoid aspirin"]
+    },
+    'Typhoid': {
+        'description': "A bacterial infection that can lead to high fever, diarrhea, and vomiting.",
+        'prevention': ["Clean water", "Typhoid vaccine", "Proper sanitation"],
+        'cure': ["Antibiotics", "Fluids"],
+        'diet': ["High calorie", "Soft diet", "Boiled water", "Curd"],
+        'lifestyle': ["Hygiene", "Rest", "Complete antibiotic course"]
+    },
+    'hepatitis A': {
+        'description': "A highly contagious liver infection caused by the hepatitis A virus.",
+        'prevention': ["Vaccination", "Hand washing", "Food safety"],
+        'cure': ["Rest", "Supportive care", "Self-limiting"],
+        'diet': ["Low fat", "High carb", "Hydration", "Avoid alcohol"],
+        'lifestyle': ["Rest", "Hygiene to prevent spread", "Avoid alcohol"]
+    },
+    'Hepatitis B': {
+        'description': "A severe liver infection caused by the hepatitis B virus.",
+        'prevention': ["Vaccine", "Safe sex", "Avoid sharing needles"],
+        'cure': ["Antivirals", "Interferon injections", "Liver transplant (severe)"],
+        'diet': ["Healthy balanced diet", "Avoid alcohol", "Coffee (beneficial for liver)"],
+        'lifestyle': ["Regular monitoring", "Avoid alcohol", "Safe practices"]
+    },
+    'Hepatitis C': {
+        'description': "A viral infection that causes liver inflammation, sometimes leading to serious liver damage.",
+        'prevention': ["Safe needles", "Screening blood products", "Safe sex"],
+        'cure': ["Direct-acting antiviral medicines (DAAs)"],
+        'diet': ["Low salt", "Low fat", "Whole foods"],
+        'lifestyle': ["Vaccinate for Hep A & B", "Avoid alcohol", "Medicine adherence"]
+    },
+    'Hepatitis D': {
+        'description': "A serious liver disease caused by the hepatitis D virus, only occurs with Hep B.",
+        'prevention': ["Hep B vaccine", "Avoid risky behaviors"],
+        'cure': ["Interferon", "Newer antivirals"],
+        'diet': ["Liver-friendly diet", "High protein", "Hydration"],
+        'lifestyle': ["Manage Hep B", "Regular monitoring", "Avoid toxins"]
+    },
+    'Hepatitis E': {
+        'description': "A liver disease caused by the hepatitis E virus, usually from contaminated water.",
+        'prevention': ["Clean drinking water", "Sanitation", "Hygiene"],
+        'cure': ["Supportive care", "Rest", "Self-resolving usually"],
+        'diet': ["Bland diet", "Fluids", "Fruit juices"],
+        'lifestyle': ["Rest", "Hydration", "Avoid alcohol"]
+    },
+    'Alcoholic hepatitis': {
+        'description': "Liver inflammation caused by drinking too much alcohol.",
+        'prevention': ["Stop drinking alcohol", "Moderate consumption"],
+        'cure': ["Alcohol cessation", "Corticosteroids", "Nutritional support"],
+        'diet': ["High protein", "High calorie", "Vitamin supplements (B1)"],
+        'lifestyle': ["Complete abstinence from alcohol", "Support groups", "Regular checkups"]
+    },
+    'Tuberculosis': {
+        'description': "A potentially serious infectious bacterial disease that mainly affects the lungs.",
+        'prevention': ["BCG vaccine", "Ventilation", "Masks in high risk"],
+        'cure': ["Antibiotics (long course 6-9 months)", "DOTS therapy"],
+        'diet': ["High protein", "Calorie dense", "Vitamins A, C, E"],
+        'lifestyle': ["Adherence to meds", "Cover mouth", "Ventilated room"]
+    },
+    'Common Cold': {
+        'description': "A viral infection of your nose and throat.",
+        'prevention': ["Hand washing", "Building immunity", "Avoid sick people"],
+        'cure': ["Rest", "Fluids", "Symptomatic relief"],
+        'diet': ["Warm soups", "Vitamin C", "Ginger, Honey"],
+        'lifestyle': ["Rest", "Steam inhalation", "Warm clothing"]
+    },
+    'Pneumonia': {
+        'description': "Infection that inflames air sacs in one or both lungs.",
+        'prevention': ["Vaccination", "Hygiene", "Quit smoking"],
+        'cure': ["Antibiotics", "Antivirals", "Hospitalization if severe"],
+        'diet': ["Warm fluids", "High protein", "Fruits"],
+        'lifestyle': ["Rest", "Humidifier", "Breathing exercises"]
+    },
+    'Dimorphic hemmorhoids(piles)': {
+        'description': "Swollen veins in your lower rectum.",
+        'prevention': ["High fiber diet", "Hydration", "Don't strain"],
+        'cure': ["Creams", "Sitz baths", "Procedures (banding, surgery)"],
+        'diet': ["Fiber rich (oats, fruits)", "Plenty of water", "Avoid spicy food"],
+        'lifestyle': ["Regular bowel movements", "Exercise", "Warm baths"]
+    },
+    'Heart attack': {
+        'description': "A blockage of blood flow to the heart muscle.",
+        'prevention': ["Control BP/Cholesterol", "Healthy diet", "No smoking"],
+        'cure': ["Emergency angioplasty", "Stents", "Medications (thinners, beta blockers)"],
+        'diet': ["Heart healthy", "Low saturated fat", "Low sodium", "Nuts, fish"],
+        'lifestyle': ["Cardiac rehab", "Stress reduction", "Regular exercise"]
+    },
+    'Varicose veins': {
+        'description': "Gnarled, enlarged veins, most commonly appearing in the legs and feet.",
+        'prevention': ["Exercise", "Weight control", "Elevate legs", "Avoid standing long"],
+        'cure': ["Compression stockings", "Sclerotherapy", "Laser surgery"],
+        'diet': ["High fiber", "Flavonoids (berries)", "Low salt"],
+        'lifestyle': ["Elevate legs", "Regular walking", "Avoid tight clothes"]
+    },
+    'Hypothyroidism': {
+        'description': "Condition where thyroid gland doesn't produce enough thyroid hormone.",
+        'prevention': ["Iodine sufficiency (usually dietary)", "Regular screening"],
+        'cure': ["Thyroid hormone replacement (Levothyroxine)"],
+        'diet': ["Iodine rich (if deficient)", "Selenium", "Zinc", "Probiotics"],
+        'lifestyle': ["Regular medication", "Stress management", "Exercise"]
+    },
+    'Hyperthyroidism': {
+        'description': "Overactive thyroid produces too much thyroxine.",
+        'prevention': ["No specific prevention", "Early detection"],
+        'cure': ["Anti-thyroid meds", "Radioactive iodine", "Surgery"],
+        'diet': ["Low iodine", "Cruciferous vegetables", "Calcium/Vitamin D"],
+        'lifestyle': ["Stress reduction", "Eye care (if affected)", "Regular checkups"]
+    },
+    'Hypoglycemia': {
+        'description': "Low blood sugar level.",
+        'prevention': ["Regular meals", "Monitor medication", "Balanced diet"],
+        'cure': ["Fast acting sugar (juice, candy)", "Glucagon injection"],
+        'diet': ["Complex carbs", "Frequent small meals", "Protein with carbs"],
+        'lifestyle': ["Carry snacks", "Monitor during exercise", "Medical ID"]
+    },
+    'Osteoarthristis': {
+        'description': "Degenerative joint disease, wearing down of protective cartilage.",
+        'prevention': ["Maintain weight", "Exercise", "Prevent injury"],
+        'cure': ["Pain relief", "PT", "Joint replacement"],
+        'diet': ["Anti-inflammatory", "Calcium/Vitamin D", "Omega-3"],
+        'lifestyle': ["Low impact exercise", "Weight loss", "Assistive devices"]
+    },
+    'Arthritis': {
+        'description': "Inflammation of one or more joints, causing pain and stiffness.",
+        'prevention': ["Maintain weight", "Protect joints", "Exercise"],
+        'cure': ["DMARDs", "NSAIDs", "Biologics", "PT"],
+        'diet': ["Mediterranean diet", "Fish oil", "Turmeric/Ginger"],
+        'lifestyle': ["Heat/Cold therapy", "Regular movement", "Joint protection"]
+    },
+    '(vertigo) Paroymsal  Positional Vertigo': {
+        'description': "Sudden sensation that you're spinning or that the inside of your head is spinning.",
+        'prevention': ["Avoid sudden head movements", "Sleep with head raised"],
+        'cure': ["Epley maneuver", "Physical therapy", "Medication for nausea"],
+        'diet': ["Low salt", "Hydration", "Avoid caffeine"],
+        'lifestyle': ["Fall prevention", "Slow movements", "Vestibular rehab"]
+    },
+    'Acne': {
+        'description': "Skin condition that occurs when hair follicles plug with oil and dead skin cells.",
+        'prevention': ["Clean skin", "Non-comedogenic products", "Don't touch face"],
+        'cure': ["Benzoyl peroxide", "Retinoids", "Antibiotics"],
+        'diet': ["Low glycemic", "Avoid excessive dairy", "Hydration"],
+        'lifestyle': ["Wash face twice daily", "Clean pillowcases", "Stress reduction"]
+    },
+    'Urinary tract infection': {
+        'description': "Infection in any part of your urinary system.",
+        'prevention': ["Hydration", " hygiene", "Urinate after sex"],
+        'cure': ["Antibiotics", "Analgesics"],
+        'diet': ["Cranberry juice", "Water", "Avoid bladder irritants (caffeine)"],
+        'lifestyle': ["Frequent urination", "Cotton underwear", "Good hygiene"]
+    },
+    'Psoriasis': {
+        'description': "Skin disease that causes red, itchy scaly patches.",
+        'prevention': ["Avoid triggers (stress, cold)", "Moisturize"],
+        'cure': ["Topical creams", "Light therapy", "Biologics"],
+        'diet': ["Anti-inflammatory", "Gluten free (if sensitive)", "Omega-3"],
+        'lifestyle': ["Sun exposure (moderate)", "Stress management", "Daily moisturizing"]
+    },
+    'Impetigo': {
+        'description': "Highly contagious skin infection that attacks infants and children.",
+        'prevention': ["Hygiene", "Wash cuts", "Don't share towels"],
+        'cure': ["Antibiotic ointment", "Oral antibiotics"],
+        'diet': ["Immune boosting foods", "Vitamin C", "Zinc"],
+        'lifestyle': ["Keep nails short", "Wash clothes in hot water", "Isolate until treated"]
+    }
+}
+
+with open('c:/Users/Sumit/.gemini/antigravity/scratch/ai_health_advisor/backend/disease_info.json', 'w') as f:
+    json.dump(disease_advice, f, indent=4)
+
+print("Successfully generated disease_info.json with advice for 41 diseases.")
